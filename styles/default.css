@@ -1,16 +1,56 @@
 :root
 {
     --dGrey: #191818;
-    --lGrey: #333333;
+    --lGrey: #4D4D4D;
 }
     
 header
 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    height: 60px;
+    width: 100%;
 }
-
+#navBar
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
 #name
 {
-    color: --dGrey;
-    font-size:20pt; 
+    float: left;
+    color: var(--dGrey);
+    font-size: 20pt;
+    text-align: left;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+#smallNav
+{
+    float: right;
+    text-align: right;
+    color: var(--lGrey);
+    font-size: 16pt;
+}
+
+.smallNavLink
+{
+    margin-left: 20px;
+}
+
+#vidStrip
+{
+    width: 100%;
+}
+
+#headerVid
+{
+    width: 100%;
+    height: calc(100% - 60px);
 }
