@@ -1,2 +1,2 @@
-# annasoligo
-Portfolio Website
+# Anna Soligo
+Portfolio Website, work in progress
