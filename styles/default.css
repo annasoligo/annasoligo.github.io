@@ -1,4 +1,16 @@
+:root
+{
+    --dGrey: #191818;
+    --lGrey: #333333;
+}
+    
 header
 {
     font-family: 'Poppins', sans-serif;
+}
+
+#name
+{
+    color: --dGrey;
+    font-size:20pt; 
 }
