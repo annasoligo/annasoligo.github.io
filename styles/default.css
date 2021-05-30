@@ -2,12 +2,15 @@
 {
     --dGrey: #191818;
     --lGrey: #616161;
+    --mGrey: #303030;
+    --mlGrey: #424242;
 
     --headerHeight: 70px;
 }
 body
 {
     margin: 0;
+    color: var(--dGrey);
 }
     
 header
@@ -17,6 +20,13 @@ header
     height: var(--headerHeight);
     width: 100%;
     top: 0;
+
+}
+
+p
+{
+    font-weight: 600;
+    font-size:14px;
 }
 
 #navBar
@@ -44,7 +54,7 @@ a
     float: right;
     text-align: right;
     color: var(--lGrey);
-    font-size: 14pt;
+    font-size: 12pt;
     margin-top: 21px;
 }
 
@@ -83,6 +93,7 @@ a
 main
 {
     font-family: 'Open Sans', sans-serif;
+    font-stretch: semi-expanded;
 }
 
 #gallerybar
@@ -116,11 +127,52 @@ h1
     position: absolute;
     z-index: 100;
     margin-top: calc(100vh - 4vw - var(--headerHeight));
-    margin-left: 50vw;
+    margin-left: 48.5vw;
 }
 
 #dArrow
 {
     width: 3vw;
     opacity: 30%;
+}
+
+#aboutMe
+{
+    margin-left: 18vw;
+    margin-right: 18vw;
+    margin-top: calc(var(--headerHeight)+6vh);
+    text-align: center;
+}
+#pPic
+{
+    float: left;
+    width: 30vw;
+}
+#bio
+{
+    margin-left: 34vw;
+    padding-top: 5vw;
+    text-align: center;
+}
+
+button
+{
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background-color: var(--mGrey);
+    border-radius: 5px;
+    width: 55px;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+
+}
+
+button:hover
+{
+    background-color: var(--mlGrey);
+    cursor: pointer;
 }
