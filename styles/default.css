@@ -1,7 +1,7 @@
 :root
 {
     --dGrey: #191818;
-    --lGrey: #696969;
+    --lGrey: #616161;
 
     --headerHeight: 70px;
 }
@@ -28,7 +28,7 @@ header
 {
     float: left;
     color: var(--dGrey);
-    font-size: 20pt;
+    font-size: 18pt;
     text-align: left;
     margin-top: 15px;
 }
@@ -52,6 +52,11 @@ a
 {
     margin-left: 20px;
 }
+.smallNavLinkSelect
+{
+    margin-left: 20px;
+    color: var(--dGrey);
+}
 
 #vidStrip
 {
@@ -60,7 +65,7 @@ a
     height: calc(100vh - var(--headerHeight));
     align-items: centre;
     overflow: hidden;
-    background-color: black;
+    background-color: var(--dGrey);
     
 }
 
@@ -71,7 +76,7 @@ a
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 15%;
+    opacity: 25%;
 }
 
 
@@ -84,7 +89,7 @@ main
 {
     position: relative;
     font-family: 'Poppins', sans-serif;
-    font-size: 16pt;
+    font-size: 14pt;
     text-align: center;
 }
 #intro
@@ -92,15 +97,30 @@ main
     position: absolute;
     color: white;
     margin-top: 30vh;
-    margin-left: calc((100vw - 835px) /2);
+    margin-left: calc((100vw - 700px) /2);
     z-index: 100;
     text-align: center;
     opacity: 90%;
 }
 
-#introText
+h1
 {
     font-family: 'Poppins', sans-serif;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 600;
+
+}
+
+#dArrowDiv
+{
+    position: absolute;
+    z-index: 100;
+    margin-top: calc(100vh - 4vw - var(--headerHeight));
+    margin-left: 50vw;
+}
+
+#dArrow
+{
+    width: 3vw;
+    opacity: 30%;
 }
