@@ -5,7 +5,7 @@
     --mGrey: #303030;
     --mlGrey: #424242;
 
-    --headerHeight: 70px;
+    --headerHeight: 65px;
 }
 body
 {
@@ -20,7 +20,6 @@ header
     height: var(--headerHeight);
     width: 100%;
     top: 0;
-
 }
 
 p
@@ -54,7 +53,6 @@ a
     float: right;
     text-align: right;
     color: var(--lGrey);
-    font-size: 12pt;
     margin-top: 21px;
 }
 
@@ -102,6 +100,7 @@ main
     font-family: 'Poppins', sans-serif;
     font-size: 14pt;
     text-align: center;
+    height: 100px;
 }
 #intro
 {
@@ -152,12 +151,13 @@ h1
 {
     margin-left: 34vw;
     padding-top: 5vw;
-    text-align: center;
+    text-align: left;
 }
 
 button
 {
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -175,4 +175,90 @@ button:hover
 {
     background-color: var(--mlGrey);
     cursor: pointer;
+}
+
+#gallery
+{
+   margin-top: 100px;
+   margin-left: 2vw;
+   margin-right: 2vw;    
+}
+
+.galleryBoxL, .galleryBoxR
+{
+    margin-bottom: calc(0.02*(96vw));
+    width: 49%;
+    height: calc(45.5vw *(9/16));
+    background-color: var(--dGrey);
+    overflow: hidden;
+    text-align: center;
+}
+.galleryBoxL
+{
+    float: Left;
+}
+.galleryBoxR
+{
+    float: Right;
+}
+
+.galleryBoxR:hover .galleryImgR,
+.galleryBoxL:hover .galleryImgL
+{
+    cursor: pointer;
+    z-index: -1;
+    opacity: 30%;
+}
+
+.galleryTextL, .galleryTextR
+{
+    position: absolute;
+    z-index: 100;
+    opacity: 0%;
+    width: inherit;
+    height: inherit;
+    margin-top: calc(45.5vw *(9/16)/3);
+    color:white;
+}
+
+h2
+{
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    margin: 5px;
+}
+
+h3
+{
+    color: inherit;
+    font-weight: 600;
+    font-size: 12pt;
+    font-weight: 400;
+    margin: 0;
+}
+
+.galleryBoxR:hover .galleryTextR
+{
+    opacity: 100%;
+    cursor: pointer;   
+}
+
+.galleryBoxL:hover .galleryTextL
+{
+    opacity: 100%;
+    cursor: pointer;   
+}
+
+#chairoHero
+{
+    margin-left: -15%;
+    height: 100%; 
+}
+
+#drawEHero
+{
+    margin-top: -5%;
+    width: 100%;
 }
