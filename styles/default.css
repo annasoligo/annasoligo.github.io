@@ -1,16 +1,23 @@
 :root
 {
     --dGrey: #191818;
-    --lGrey: #616161;
+    --lGrey: #6e6e6e;
     --mGrey: #303030;
     --mlGrey: #424242;
 
     --headerHeight: 65px;
+    --footerHeight: 50px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body
 {
     margin: 0;
     color: var(--dGrey);
+    font-family: 'Open Sans', sans-serif;
 }
     
 header
@@ -20,10 +27,14 @@ header
     height: var(--headerHeight);
     width: 100%;
     top: 0;
+    box-shadow: 2px 2px 5px  rgba(25,25,25,0.1);
 }
+
+
 
 p
 {
+
     font-weight: 600;
     font-size:14px;
 }
@@ -87,13 +98,6 @@ a
     opacity: 25%;
 }
 
-
-main
-{
-    font-family: 'Open Sans', sans-serif;
-    font-stretch: semi-expanded;
-}
-
 #gallerybar
 {
     position: relative;
@@ -137,9 +141,12 @@ h1
 
 #aboutMe
 {
+    height: calc(93vh - var(--headerHeight) - var(--footerHeight));
+    min-height: calc(37vw + 7vh);
     margin-left: 18vw;
     margin-right: 18vw;
-    margin-top: calc(var(--headerHeight)+6vh);
+    margin-top: 5vh;
+    margin-bottom: 2vh;
     text-align: center;
 }
 #pPic
@@ -150,8 +157,13 @@ h1
 #bio
 {
     margin-left: 34vw;
-    padding-top: 5vw;
+    height: calc(30vw * (37/31));
     text-align: left;
+}
+
+#bioText
+{
+    padding-top: calc(20vw - 190px);
 }
 
 button
@@ -218,6 +230,7 @@ button:hover
     width: inherit;
     height: inherit;
     margin-top: calc(45.5vw *(9/16)/3);
+    margin-left: -1vw;
     color:white;
 }
 
@@ -251,14 +264,48 @@ h3
     cursor: pointer;   
 }
 
+.galleryLink {
+    position: absolute;
+    width: 46.5vw;
+    height: calc(45.5vw *(9/16));
+    z-index: 100;
+}
+
 #chairoHero
 {
-    margin-left: -15%;
-    height: 100%; 
+    margin-left: -18%;
+    margin-top: -5%;
+    height: 120%; 
 }
 
 #drawEHero
 {
     margin-top: -5%;
     width: 100%;
+}
+
+#websiteHero
+{
+    margin-left: -3%;
+
+    height: 100%;
+}
+
+footer {
+    height: var(--footerHeight);
+    margin: 0 4vw;
+    bottom: 0;
+}
+
+
+#copyright {
+    float: right;
+    margin-bottom: 5px;
+    color: var(--lGrey);
+}
+
+#codeNote {
+    float: left;
+    margin-bottom: 5px;
+    color: var(--lGrey);
 }

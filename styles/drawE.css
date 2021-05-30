@@ -1,0 +1,41 @@
+#drawEHeadImg {
+    width:100%;
+    margin-top: -10vw;
+
+}
+
+#drawEHeader {
+    overflow: hidden;
+    z-index: -100;
+}
+
+#drawEHeadText {
+    position: absolute;
+    margin-left: 12vw;
+    margin-top: 15vw;
+}
+
+#drawETitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 0;
+}
+
+#drawESubtitle {
+    margin-top: 1vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#deContent {
+    width: 100%;
+    overflow: hidden;
+}
+
+#drawEVid, #drawEDev {
+    width: 79vw;
+    margin: 1vw 10vw;
+}
+

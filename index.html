@@ -32,7 +32,9 @@
                </h1> 
             </div>
             <div id="dArrowDiv">
-                <img src="./content/symbols/downArrow.png" alt="Down Arrow" id="dArrow">
+                <a href="#galleryBarHeader">
+                    <img src="./content/symbols/downArrow.png" alt="Down Arrow" id="dArrow">
+                </a>
             </div>
             <div id="vidStrip">
                 <video id="headerVid" autoplay muted loop>
@@ -45,23 +47,44 @@
             <div id="gallery">
                 <div class="galleryRow">
 
-                    <div class="galleryBoxL">
-                        <div class="galleryTextL">
-                            <h2 class="galleryTitle">Chairo</h2>
-                            <h3 class="gallerySubtitle">Human Centred Design (2021)</h3>
+                    <a href="./projectPages/chairo.html">
+                        <div class="galleryBoxL">
+                            <div class="galleryLink"></div>
+                            <div class="galleryTextL">
+                                <h2 class="galleryTitle">Chairo</h2>
+                                <h3 class="gallerySubtitle">Human Centred Design (2021)</h3>
+                            </div>
+                            <img id="chairoHero" class="galleryImgL" src="./content/chairo/chaHero.jpg">
                         </div>
-                        <img id="chairoHero" class="galleryImgL" src="./content/Chairo/chHero.jpg">
-                    </div>
+                    </a>
 
-                    <div class="galleryBoxR">
-                        <div class="galleryTextR">
-                            <h2 class="galleryTitle">Draw E</h2>
-                            <h3 class="gallerySubtitle">Physical Computing (2021)</h3>
+                    <a href="./projectPages/drawE.html">
+                        <div class="galleryBoxR">
+                            <div class="galleryTextR">
+                                <h2 class="galleryTitle">Draw E</h2>
+                                <h3 class="gallerySubtitle">Physical Computing (2021)</h3>
+                            </div>
+                                <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
                         </div>
-                        <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
-                    </div>
+                    </a>
 
                 </div>
+                <div class="galleryRow">
+
+                    <a href="https://github.com/annasoligo/annasoligo.github.io">
+                        <div class="galleryBoxL">
+                            <div class="galleryTextL">
+                                <h2 class="galleryTitle">Portfolio Website</h2>
+                                <h3 class="gallerySubtitle">Coded from scratch in HTML, CSS and JS (2021)</h3>
+                            </div>
+                            <img id="websiteHero" class="galleryImgL" src="./content/websiteScreenshot.jpg">
+                        </div>
+                    </a>
+
+                    <div class="galleryBoxR">
+                    </div>
+                </div>
+
                 <div class="galleryRow">
                     <div class="galleryBoxL">
                     </div>
@@ -71,6 +94,11 @@
             </div>
             
         </main>
+
+        <footer>
+            <div id="codeNote"><p>Coded from scratch, hosted on GitHub.</p></div>
+            <div id="copyright"><p>© 2021 Anna Soligo</p></div>
+        </footer>
 
     </body>
 
