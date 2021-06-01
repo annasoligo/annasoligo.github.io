@@ -157,13 +157,17 @@ h1
 #bio
 {
     margin-left: 34vw;
+    
     height: calc(30vw * (37/31));
     text-align: left;
+    margin-right: 0;
 }
 
 #bioText
 {
     padding-top: calc(20vw - 190px);
+    margin-left: 0;
+    width:33vw;
 }
 
 button
@@ -344,6 +348,7 @@ p {
 
 .projSubtitle {
     margin-top: 1vh;
+    margin-left: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: calc(8px + 0.75vw);
