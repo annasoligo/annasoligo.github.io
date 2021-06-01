@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="../styles/default.css" rel="stylesheet">
+        <link href="../styles/fea.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+        <script type="module" src="scripts/main.js"></script>
+        <title>Anna Soligo</title>
+        <link rel="icon" type="image/png" href="../content/symbols/favicon.png"/>
+
+    </head>
+
+    <body id="body">
+        <header id="header">
+            <div id="navBar">
+                <div id="name">
+                    <a href="../index.html">Anna Soligo</a>
+                </div>
+                <div id="smallNav">
+                    <a class="smallNavLink" href="../index.html">Projects</a>
+                    <a class="smallNavLink" href="../aboutMe.html">About Me</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id= "feaHeader">
+                <div id="feaHeadText">
+                    <h1 class="projTitle">Tandem Bicycle Design</h1>
+                    <p class="projSubtitle">
+                        A lightweight tandem bicycle frame, designed using finite element <br>
+                        analysis to optimise the material and structural dimensions.
+                    </p>
+                </div>       
+                <img id="feaHeadImg" src="../content/fea/bikeGrad.jpg" alt="Finite element analysis image of a bicycle">
+            </div>
+
+            <div class="pageCont">
+                <img class="feaPic" src="../content/fea/techDrawing.png">
+
+                <p class="pagePara">
+                    This bicycle is designed to have an expected life-span of 10 years (equivalent to 1 million loading cycles)
+                    and a natural frequency greater than 30 Hz, so as not to vibrate in a way that is uncomfortable for the users.
+                    The bicycle frame was modelled in Solidworks, and loading was applied to the seats and pedals, as shown below. 
+                    The fork shell and rear wheel bearings are modelled as fixed and hinged fixtures respectively.
+                </p>
+
+                <img class="feaPic" src="../content/fea/fixtures.png">
+                <p class="pagePara">
+                    A mesh refinement study was performed on static loading studies, reducing the mesh size in the areas with the 
+                    highest stress concentration till the stress results converged, in order to minimise the impact of discretisation 
+                    on the results. The process and results are shown below. Fatigue and natural frequency studies were then run on 4 iterations
+                    (2 geometries and 2 materials), to find the lightest frame which passed the set criteria.
+                </p>
+                <img class="feaPic" src="../content/fea/meshRefine.png">
+                <img class="feaPicN" src="../content/fea/convergence.png">
+                <div>
+                    <button id="reportButton" type="button">
+                        <a href="../content/fea/FEA_report_ASoligo.pdf" target="_blank">Full Report</a>
+                    </button>
+                </div>
+            </div>
+
+                
+        </main>
+
+        <footer>
+        <div>
+            <div id="codeNote"><p>Coded from scratch, hosted on GitHub.</p></div>
+            <div id="copyright"><p>© 2021 Anna Soligo</p></div>
+        </div>
+        </footer>
+
+    </body>
+
+</html>

@@ -176,11 +176,20 @@ button
     color: white;
     background-color: var(--mGrey);
     border-radius: 5px;
-    width: 55px;
     height: 30px;
     text-decoration: none;
     border: none;
 
+}
+
+#cvButton {
+    width: 55px;
+}
+
+#reportButton {
+    width: 120px;
+    font-weight: 400;
+    margin-left: calc(50vw - 60px);
 }
 
 button:hover
@@ -287,8 +296,14 @@ h3
 #websiteHero
 {
     margin-left: -3%;
-
     height: 100%;
+}
+
+#feaHero
+{
+
+    margin-left: -15%;
+    width: 130%;
 }
 
 footer {
@@ -308,4 +323,29 @@ footer {
     float: left;
     margin-bottom: 5px;
     color: var(--lGrey);
+}
+
+.pagePara {
+    width: 65vw;
+    margin-left: 17.5vw;
+}
+
+.pageCont {
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+    text-align: left;
+}
+
+.projTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: calc(16px + 1vw);
+    margin-bottom: 0;
+}
+
+.projSubtitle {
+    margin-top: 1vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: calc(8px + 0.75vw);
 }
