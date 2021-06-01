@@ -324,7 +324,7 @@ footer {
     color: var(--lGrey);
 }
 
-.pagePara {
+p {
     width: 65vw;
     margin-left: 17.5vw;
 }
