@@ -11,8 +11,8 @@
 
 
 #landscapeImg {
-    width: min(53vw, 1200px);
-    margin-left: max(23vw, calc(50vw - 600px));
+    height: min(80vh, 900px);
+    margin-left: max(calc(50vw - 60vh), calc(50vw - 600px));
     margin-top: 20px;
 }
 #portraitImg {
