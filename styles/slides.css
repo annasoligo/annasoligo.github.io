@@ -1,0 +1,80 @@
+:root
+{
+    --dGrey: #191818;
+    --lGrey: #6e6e6e;
+    --mGrey: #303030;
+    --mlGrey: #424242;
+
+    --headerHeight: 65px;
+    --footerHeight: 50px;
+}
+
+
+#landscapeImg {
+    width: min(50vw, 1200px);
+    margin-left: max(25vw, calc(50vw - 500px));
+    margin-top: 20px;
+}
+#portraitImg {
+    height: min(80vh, 900px);
+    margin-left: max(calc(50vw - 30vh), calc(50vw - 300px));
+    margin-top: 20px;
+}
+
+.carousel-item {
+    height: calc(100vh);
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../content/symbols/lArrow.svg");
+    background-size: 70%;
+    margin-left: 13vw;
+    margin-top: -15vh;
+   }
+   
+.carousel-control-next-icon {
+     background-image: url("../content/symbols/rArrow.svg");
+     background-size: 70%;
+     margin-left: -13vw;
+     margin-top: -15vh;
+}
+
+.carousel-indicators li {
+   width: 15px;
+   height: 15px;
+   margin-right: 5px;
+   border-radius: 100%;
+   opacity: 40%;
+   background-color: var(--lGrey);
+ }
+
+ .carousel-indicators li.active {
+   opacity: 100%;
+   background-color: var(--lGrey);
+ }
+
+ a:hover, #navBar:hover {
+     text-decoration: none;
+     color: var(--dGrey);
+ }
+
+ .navIconSl {
+    opacity: 75%;
+    width: 20px;
+    margin-left: 15px;
+    margin-top: -2px;
+}
+
+.navIconSl:hover {
+    opacity: 100%;
+}
+
+#inNav {
+    padding-bottom: 4px;   
+}
+
+.carousel-caption {
+    color: var(--dGrey);
+    bottom:25px;
+}
+
