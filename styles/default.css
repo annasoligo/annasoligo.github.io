@@ -287,9 +287,16 @@ button:hover
     opacity: 0%;
     width: inherit;
     height: inherit;
+    color:white;
+}
+
+.galleryTitle {
     margin-top: calc(45.5vw *(9/16)/3);
     margin-left: -1vw;
-    color:white;
+}
+
+.gallerySubtitle {
+    margin-left: -1vw;
 }
 
 h2
