@@ -34,9 +34,10 @@ header
 
 p
 {
-
     font-weight: 600;
-    font-size:14px;
+    font-size: calc(8px + 0.5vw);
+    width: 65vw;
+    margin-left: 17.5vw;
 }
 
 #navBar
@@ -71,10 +72,35 @@ a
 {
     margin-left: 20px;
 }
+
+.smallNavLink:hover
+{
+    color: var(--dGrey);
+}
+
 .smallNavLinkSelect
 {
     margin-left: 20px;
     color: var(--dGrey);
+}
+
+.navIcon {
+    opacity: 75%;
+    width: 20px;
+    margin-left: 15px;
+    margin-bottom: -2.5px;
+}
+
+.navIcon:hover {
+    opacity: 100%;
+}
+
+#emNav {
+    padding-bottom: 1.5px;
+}
+
+#inNav {
+    padding-left: 10px;
 }
 
 #vidStrip
@@ -141,7 +167,7 @@ h1
 
 #aboutMe
 {
-    height: calc(93vh - var(--headerHeight) - var(--footerHeight));
+    height: calc(90vh - var(--headerHeight) - var(--footerHeight));
     min-height: calc(37vw + 7vh);
     margin-left: 18vw;
     margin-right: 18vw;
@@ -157,17 +183,31 @@ h1
 #bio
 {
     margin-left: 34vw;
-    
     height: calc(30vw * (37/31));
     text-align: left;
     margin-right: 0;
+    padding-top: 3vw;
+}
+
+.hiHeader
+{
+    font-size: calc(18pt);
+    font-weight: 600;
 }
 
 #bioText
 {
-    padding-top: calc(20vw - 190px);
     margin-left: 0;
     width:33vw;
+}
+
+.embLink {
+    color: var(--mlGrey);
+}
+
+.embLink:hover {
+    color: var(--dGrey);
+    cursor: pointer;
 }
 
 button
@@ -176,7 +216,7 @@ button
     margin-left: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: calc(10px + 0.5vw);
     color: white;
     background-color: var(--mGrey);
     border-radius: 5px;
@@ -187,18 +227,20 @@ button
 }
 
 #cvButton {
-    width: 55px;
+    width: max(50px, 9%);
+    height: max(30px, 4.5%);
 }
 
 #reportButton {
-    width: 120px;
+    width: max(130px, 8vw);
+    height: max(35px,2vw);
     font-weight: 400;
-    margin-left: calc(50vw - 60px);
+    margin-left: 45vw;
 }
 
 button:hover
 {
-    background-color: var(--mlGrey);
+    background-color: var(--dGrey);
     cursor: pointer;
 }
 
@@ -206,7 +248,10 @@ button:hover
 {
    margin-top: 100px;
    margin-left: 2vw;
-   margin-right: 2vw;    
+   margin-right: 2vw;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;   
 }
 
 .galleryBoxL, .galleryBoxR
@@ -319,19 +364,14 @@ footer {
 
 #copyright {
     margin-left: 0;
-    margin-bottom: 5px;
     color: var(--lGrey);
     font-size: 8px;
 }
 
-p {
-    width: 65vw;
-    margin-left: 17.5vw;
-}
 
 .pageCont {
     margin-top: 12vh;
-    margin-bottom: 12vh;
+    padding-bottom: 12vh;
     text-align: left;
 }
 
@@ -347,5 +387,10 @@ p {
     margin-left: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: calc(8px + 0.75vw);
+    font-size: calc(8px + 0.65vw);
+}
+
+.space {
+    width: 100vw;
+    height: 10vh;
 }
