@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Draw-E
+    </title>
+    <meta name="viewport" content="user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+</head>
+<body  style="    font-family: 'Poppins', sans-serif;
+font-weight: 600;
+color: black;
+background-color:#CA9E67;
+font-size: large;">
+        <div id="leftCol" style ="float:left; width: 49%;">
+            <h1 style="text-align:center;">
+            Draw-E </h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button id = "armUp" class= "button-d" 
+                type="button"><div id="triUp" class="nSelectU"></div></button>
+                <button id = "armDown" class= "button-d" 
+                type="button"><div id="triDown" class="nSelectD"></div></button>
+            </div>
+            <canvas id="canvas" name="game"></canvas>
+        </div>
+        <div id="position" style= "float:right; width: 40%; margin-right: 10%;">
+                <p>
+                    Click and drag the joystick or press the <br>
+                    buttons to see their mapped output here.
+                </p>
+                <p id= "pos-text">
+
+                </p>
+        </div>
+            <style>
+                button {
+                    display: block; padding: 10px; border: 3px solid #B38B5B;
+                    border-radius: 50%; margin: 7px; background-color: white;
+                    text-align: center; padding-top: 11px;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 25px;
+                }
+                .selectU {
+                    border-bottom: 20px solid #1F64AD;
+                    padding-top: 5px;
+                }
+                .nSelectU {
+                    border-bottom: 20px solid #3C8DCC;
+                    padding-top: 5px;
+                }
+                .selectD {
+                    border-top: 20px solid #1F64AD;
+                    padding-top: 5px;
+                }
+                .nSelectD {
+                    border-top: 20px solid #3C8DCC;
+                    padding-top: 5px;
+                }
+                #triUp {
+                    width: 0; height: 0; border-left: 14px solid transparent;
+                    border-right: 14px solid transparent; margin-bottom: 4px;
+                }
+                #triDown {
+	                width: 0; height: 0; border-left: 14px solid transparent;
+                    border-right: 14px solid transparent; margin-top: 4px;
+                }
+                #position {
+                    background-color: white;
+                    bottom: 0;
+                    height: max(180px, 15vh);
+                    margin-top: 20vh;
+                    text-align: center;
+                    z-index: -100;
+                }
+                
+                </style>
+    
+    <script>
+
+        function send(l,r,a){
+
+            var data = {"Left Wheel Speed":l,"Right Wheel Speed":r, "Arm Position":a};
+            data = JSON.stringify(data);
+            document.getElementById("pos-text").textContent = data;
+            
+        };
+
+
+    </script>
+    <script>
+        var canvas, ctx;
+        var a = 0;
+
+        window.addEventListener('load', () => {
+
+            canvas = document.getElementById('canvas');
+            ctx = canvas.getContext('2d');          
+            resize(); 
+            
+
+            document.addEventListener('mousedown', startDrawing);
+            document.addEventListener('mouseup', stopDrawing);
+            document.addEventListener('mousemove', Draw);
+
+            document.addEventListener('touchstart', startDrawing);
+            document.addEventListener('touchend', stopDrawing);
+            document.addEventListener('touchcancel', stopDrawing);
+            document.addEventListener('touchmove', Draw);
+            window.addEventListener('resize', resize);
+
+            document.getElementById("L").innerText = 0;
+            document.getElementById("R").innerText = 0;
+            document.getElementById("speed").innerText = 0;
+            document.getElementById("angle").innerText = 0;
+        });
+
+        armUp = document.getElementById('armUp');
+        armDown = document.getElementById('armDown');
+        triUp = document.getElementById('triUp');
+        triDown = document.getElementById('triDown');
+        armUp.onclick = function() {
+            if (triUp.className == 'nSelectU') {
+                triUp.className = 'selectU';
+                triDown.className = 'nSelectD';
+                a = 1;
+                send(0,0,a);
+            }
+        };
+        armDown.onclick = function() {
+            console.log('down clicked');
+            if (triDown.className == 'nSelectD') {
+                triDown.className = 'selectD';
+                triUp.className = 'nSelectU';
+                a = 0;
+                send(0,0,a);
+            }
+        };
+      
+        let jst_l = '#3C8DCC'
+        let jst_d = '#1F64AD'
+
+        var width, height, radius, x_orig, y_orig;
+        function resize() {
+            width = window.innerWidth;
+            radius = 70;
+            height = radius * 5;
+            ctx.canvas.width = width /2;
+            ctx.canvas.height = height;
+            background();
+            joystick(width / 4 -10, 150, jst_l);
+        }
+
+        function background() {
+            x_orig = width / 4 -10;
+            y_orig = 150;
+
+            ctx.beginPath();
+            ctx.arc(x_orig, y_orig, radius + 14, 0, Math.PI * 2, true);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.strokeStyle = '#B38B5B';
+            ctx.lineWidth = 7;
+            ctx.stroke();
+        }
+
+        function joystick(width, height, colour) {
+            ctx.beginPath();
+            ctx.arc(width, height, radius, 0, Math.PI * 2, true);
+            ctx.fillStyle = colour;
+            ctx.fill();
+            
+        }
+
+        let coord = { x: 0, y: 0 };
+        let paint = false;
+
+
+        function getPosition(event) {
+            var mouse_x = event.clientX || event.touches[0].clientX;
+            var mouse_y = event.clientY || event.touches[0].clientY;
+            coord.x = mouse_x - canvas.offsetLeft;
+            coord.y = mouse_y - canvas.offsetTop;
+        }
+
+        function is_it_in_the_circle() {
+            var current_radius = Math.sqrt(Math.pow(coord.x - x_orig, 2) + Math.pow(coord.y - y_orig, 2));
+            if (radius >= current_radius) return true
+            else return false
+        }
+
+
+        function startDrawing(event) {
+            paint = true;
+            getPosition(event);
+            if (is_it_in_the_circle()) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                background();
+                joystick(coord.x, coord.y, jst_d);
+                Draw();
+            }
+        }
+
+
+        function stopDrawing() {
+            paint = false;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            resize();
+            send(0, 0, a);
+
+        }
+
+        function Draw(event) {
+
+            if (paint) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                background();
+                var angle_in_degrees,x, y, speed;
+                var angle = Math.atan2((coord.y - y_orig), (coord.x - x_orig));
+
+                if (Math.sign(angle) == -1) {
+                    angle_in_degrees = Math.round(-angle * 180 / Math.PI);
+                }
+                else {
+                    angle_in_degrees = Math.round( 360 - angle * 180 / Math.PI);
+                }
+
+
+                if (is_it_in_the_circle()) {
+                    joystick(coord.x, coord.y, jst_d);
+                    x = coord.x;
+                    y = coord.y;
+                }
+                else {
+                    x = radius * Math.cos(angle) + x_orig;
+                    y = radius * Math.sin(angle) + y_orig;
+                    joystick(x, y, jst_d);
+                }
+
+            
+                getPosition(event);
+
+                var speed =  Math.round(100 * Math.sqrt(Math.pow(x - x_orig, 2) + Math.pow(y - y_orig, 2)) / radius);
+
+                var x_rel = Math.round(x - x_orig);
+                var y_rel = Math.round(y - y_orig);
+
+                var v = (100- Math.abs(x_rel))*(y_rel/100)+y_rel;
+                var w = (100- Math.abs(y_rel))*(x_rel/100)+x_rel;
+
+                var left_w = -Math.round(v-w)/2;
+                var right_w = -Math.round(v+w)/2;
+
+                l = Math.round(left_w*255/400);
+                r = Math.round(right_w*255/400);
+
+                if (l<0)
+                    l -= 130;
+                
+                else if (l >0) 
+                    l += 130;
+
+                if (r <0)
+                    r -= 130;
+                    
+                else if (r >0)
+                    r += 130;
+                
+                send(l, r, a);
+            }
+        } 
+    </script>
+</body>
+</html><br>

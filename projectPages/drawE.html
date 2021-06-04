@@ -42,6 +42,23 @@
                 <video id="drawEVid" poster="../content/drawE/deCover.jpg" controls>
                     <source src="../content/drawE/deVideo.mp4"></source>
                 </video>
+
+                <iframe id="joystickCtrl" src="./joystick.html" title="Draw-E Joystick Control" scrolling="no">
+                </iframe>
+
+                <p>
+                    <br><br>
+                    Draw-E's adjustable hands can be made to hold a variety of different art tools, 
+                    then he can be made to draw, write or paint by 'driving' him using a web-app. 
+                    When Draw-E feels to hot, fans on the body turn on to cool him down. When you 
+                    get too close to his pen, he'll flash his red lights. <br><br>
+                    The web-app is hosted on a server run on an ESP32 inside Draw-E. 
+                    Buttons move the arm up and down, and a joystick coded in javascript controls 
+                    the speed and direction by mapping the coordinates of the finger or mouse position 
+                    to left and right wheel speeds. A thermistor detects the temperature to and an ultrasonic 
+                    sensor detects the proximity of obstacles. <br><br>
+                    Aside from the electronics, Draw-E was built using paper, cardboard, a clothes hangar and glue.
+                </p>
             
                 <img id="drawEDev" src="../content/drawE/deDevelopment.jpg" alt="Development drawings">
             </div>
