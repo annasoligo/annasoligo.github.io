@@ -90,10 +90,6 @@ header
     opacity: 90%;
 }
 
-
-
-
-
 p
 {
     font-weight: 600;
@@ -319,6 +315,7 @@ button:hover
     background-color: var(--dGrey);
     overflow: hidden;
     text-align: center;
+    transition: 0.2s opacity;
 }
 .galleryBoxL
 {
@@ -408,7 +405,7 @@ h3
 
 #websiteHero
 {
-    margin-left: -3%;
+    margin-left: 0%;
     height: 100%;
 }
 
@@ -423,6 +420,11 @@ h3
     margin-top: -3%;
 }
 
+#photoHero {
+    width: 100%;
+    margin-top: -5%;
+}
+
 footer {
     height: var(--footerHeight);
     margin: 0;
@@ -434,7 +436,7 @@ footer {
 #copyright {
     margin-left: 17vw;
     color: var(--lGrey);
-    font-size: 12px;
+    font-size: calc(6px+0.4vw);
 }
 
 

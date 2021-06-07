@@ -11,18 +11,18 @@
 
 
 #landscapeImg {
-    height: min(80vh, 900px);
-    margin-left: max(calc(50vw - 60vh), calc(50vw - 600px));
-    margin-top: 20px;
+    height: calc(80vh - var(--headerHeight));
+    margin-left: calc(50vw - 55vh);
+    margin-top: 5vh;
 }
 #portraitImg {
-    height: min(80vh, 900px);
-    margin-left: max(calc(50vw - 30vh), calc(50vw - 300px));
+    height: calc(80vh - var(--headerHeight));
+    margin-left: calc(50vw - 27vh);
     margin-top: 20px;
 }
 
 .carousel-item {
-    height: calc(100vh);
+    height: calc(100vh - var(--headerHeight));
 }
 
 .carousel-control-prev-icon {
@@ -75,6 +75,16 @@
 
 .carousel-caption {
     color: var(--dGrey);
-    bottom:25px;
+    bottom:5vh;
 }
 
+h5 {
+    font-size: calc(10px + 1vh);
+}
+
+@media only screen and (max-height: 700px) {
+    h5 {
+        font-size: 0;
+    }
+    }
+  }

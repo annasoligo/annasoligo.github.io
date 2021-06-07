@@ -76,20 +76,20 @@
                                 <h2 class="galleryTitle">Draw E</h2>
                                 <h3 class="gallerySubtitle">Physical Computing (2021)</h3>
                             </div>
-                                <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
+                            <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
                         </div>
                     </a>
 
                 </div>
                 <div class="galleryRow">
 
-                    <a href="https://github.com/annasoligo/annasoligo.github.io">
+                    <a href="./projectPages/website.html" onmouseover="wshover()" onmouseout="wsoff()">
                         <div class="galleryBoxL">
                             <div class="galleryTextL">
                                 <h2 class="galleryTitle">Portfolio Website</h2>
-                                <h3 class="gallerySubtitle">Coded from scratch in HTML, CSS and JS (2021)</h3>
+                                <h3 class="gallerySubtitle">Coding - HTML, CSS and JS (2021)</h3>
                             </div>
-                            <img id="websiteHero" class="galleryImgL" src="./content/websiteScreenshot.jpg">
+                            <img id="websiteHero" class="galleryImgL" src="./content/website/websiteScreenshot.jpg">
                         </div>
                     </a>
 
@@ -99,7 +99,7 @@
                                 <h2 class="galleryTitle">Tandem Bicycle Design</h2>
                                 <h3 class="gallerySubtitle">Finite Element Analysis (2021)</h3>
                             </div>
-                                <img id="feaHero" class="galleryImgR" src="./content/fea/bikeGrad.jpg">
+                            <img id="feaHero" class="galleryImgR" src="./content/fea/bikeGrad.jpg">
                         </div>
                     </a>
 
@@ -114,12 +114,27 @@
                         </div>
                     </a>
 
-                    <div class="galleryBoxR">
-                    </div>
+                    <a href="./projectPages/photography.html">
+                        <div class="galleryBoxR">
+                            <div class="galleryTextR">
+                                <h2 class="galleryTitle">London Streets</h2>
+                                <h3 class="gallerySubtitle">Photography (2018 - Present)</h3>
+                            </div>
+                                <img id="photoHero" class="galleryImgR" src="./content/photography/globePub.jpg">
+                        </div>
+                    </a>
                 </div>
             </div>
             
         </main>
+        <script>
+            function wshover() {
+                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot2.jpg";
+            }
+            function wsoff() {
+                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot.jpg";
+            }
+        </script>
 
         <footer>
                 <div>
