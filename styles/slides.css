@@ -82,9 +82,8 @@ h5 {
     font-size: calc(10px + 1vh);
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 580px) {
     h5 {
         font-size: 0;
     }
-    }
-  }
+}
