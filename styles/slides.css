@@ -12,13 +12,10 @@
 
 #landscapeImg {
     height: calc(80vh - var(--headerHeight));
-    margin-left: calc(50vw - 55vh);
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 #portraitImg {
     height: calc(80vh - var(--headerHeight));
-    margin-left: calc(50vw - 27vh);
-    margin-top: 20px;
 }
 
 .carousel-item {
@@ -42,7 +39,6 @@
 .carousel-indicators li {
    width: 15px;
    height: 15px;
-   margin-right: 5px;
    border-radius: 100%;
    opacity: 40%;
    background-color: var(--lGrey);
@@ -79,7 +75,7 @@
 }
 
 h5 {
-    font-size: calc(10px + 1vh);
+    font-size: calc(8px + 1vh);
 }
 
 @media only screen and (max-height: 580px) {
