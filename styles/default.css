@@ -41,57 +41,7 @@ header
     z-index: 100;
     overflow: visible;
 }
-<<<<<<< HEAD
 
-
-#Wname
-{
-    position: absolute;
-    top: 20px;
-    left: 5vw;
-    font-size: 18pt;
-    z-index: inherit;
-    opacity: 90%;
-}
-
-#WsmallNav
-{
-    position: absolute;
-    top: 22px;
-    right: 5vw;
-    z-index: inherit;
-}
-
-.WsmallNavLink {
-    opacity: 40%;
-}
-
-.WsmallNavLink,
-.WsmallNavLinkSelect
-{
-    margin-left: 20px;
-    z-index: inherit;
-}
-
-.WsmallNavLink:hover,
-.WsmallNavLinkSelect
-{
-    opacity: 90%;
-    z-index: inherit;
-}
-
-.WnavIcon {
-    opacity: 40%;
-    width: 20px;
-    margin-left: 15px;
-    margin-bottom: -2.5px;
-}
-=======
->>>>>>> 461c06c4d1f5b270c2085235e4af845c704ee086
-
-.WnavIcon:hover {
-    opacity: 90%;
-}
 
 #Wname
 {
