@@ -9,11 +9,12 @@
     <script type="module" src="scripts/main.js"></script>
     <title>Anna Soligo</title>
     <link rel="icon" type="image/png" href="./content/symbols/favicon.png"/>
+    <link rel="preload" as="image" href="./content/website/websiteScreenshot2.jpg">
 
     </head>
 
     <body id="body">
-        <header id="header">
+        <header>
             <div id="navBar">
                 <div id="name">
                     <a href="./index.html">Anna Soligo</a>
@@ -28,6 +29,17 @@
         </header>
 
         <main>
+            <div id="whiteHeader">
+                <div id="Wname">
+                    <a href="./index.html">Anna Soligo</a>
+                </div>
+                <div id="WsmallNav">
+                    <a class="WsmallNavLinkSelect" href="./index.html">Projects</a>
+                    <a class="WsmallNavLink" href="./aboutMe.html">About Me</a>
+                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="WnavIcon" id="inNav" src="./content/symbols/Wlinkedin.png"></a>
+                    <a href="mailto: ajs1618@ic.ac.uk"><img class="WnavIcon" id="emNav" src="./content/symbols/Wemail.png"></a>
+                </div>
+            </div>
             <div id="intro">
                <h1 id="introText"> 
                    Hi, my name is Anna. I'm a design engineer <br>
@@ -35,7 +47,7 @@
                </h1> 
             </div>
             <div id="dArrowDiv">
-                <a href="#galleryBarHeader">
+                <a href="#gallery">
                     <img src="./content/symbols/downArrow.png" alt="Down Arrow" id="dArrow">
                 </a>
             </div>
@@ -44,20 +56,17 @@
                     <source src="./content/headervid1.mp4"></source>
                 </video>
             </div>
-            <div id="galleryBar">
-                <a id="galleryBarHeader"></a>
-            </div>
+
             <div id="gallery">
                 <div class="galleryRow">
 
-                    <a href="./projectPages/chairo.html">
+                    <a href="./projectPages/website.html" onmouseover="wshover()" onmouseout="wsoff()">
                         <div class="galleryBoxL">
-                            <div class="galleryLink"></div>
                             <div class="galleryTextL">
-                                <h2 class="galleryTitle">Chairo</h2>
-                                <h3 class="gallerySubtitle">Human Centred Design (2021)</h3>
+                                <h2 class="galleryTitle">Portfolio Website</h2>
+                                <h3 class="gallerySubtitle">Coding - HTML, CSS and JS (2021)</h3>
                             </div>
-                            <img id="chairoHero" class="galleryImgL" src="./content/Chairo/chaHero.jpg">
+                            <img id="websiteHero" class="galleryImgL" src="./content/website/websiteScreenshot.jpg">
                         </div>
                     </a>
 
@@ -67,20 +76,20 @@
                                 <h2 class="galleryTitle">Draw E</h2>
                                 <h3 class="gallerySubtitle">Physical Computing (2021)</h3>
                             </div>
-                                <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
+                            <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
                         </div>
                     </a>
 
                 </div>
                 <div class="galleryRow">
 
-                    <a href="https://github.com/annasoligo/annasoligo.github.io">
+                    <a href="./projectPages/nintendoRev.html">
                         <div class="galleryBoxL">
                             <div class="galleryTextL">
-                                <h2 class="galleryTitle">Portfolio Website</h2>
-                                <h3 class="gallerySubtitle">Coded from scratch in HTML, CSS and JS (2021)</h3>
+                                <h2 class="galleryTitle">Nintendo Rev</h2>
+                                <h3 class="gallerySubtitle">Industrial Design (2021)</h3>
                             </div>
-                            <img id="websiteHero" class="galleryImgL" src="./content/websiteScreenshot.jpg">
+                            <img id="ninRevHero" class="galleryImgL" src="./content/nintendoRev/tstHero.jpg">
                         </div>
                     </a>
 
@@ -90,9 +99,35 @@
                                 <h2 class="galleryTitle">Tandem Bicycle Design</h2>
                                 <h3 class="gallerySubtitle">Finite Element Analysis (2021)</h3>
                             </div>
-                                <img id="feaHero" class="galleryImgR" src="./content/fea/bikeGrad.jpg">
+                            <img id="feaHero" class="galleryImgR" src="./content/fea/bikeGrad.jpg">
                         </div>
                     </a>
+                
+                    <div class="galleryRow">
+
+                        <a href="./projectPages/chairo.html">
+                            <div class="galleryBoxL">
+                                <div class="galleryLink"></div>
+                                <div class="galleryTextL">
+                                    <h2 class="galleryTitle">Chairo</h2>
+                                    <h3 class="gallerySubtitle">Human Centred Design (2021)</h3>
+                                </div>
+                                <img id="chairoHero" class="galleryImgL" src="./content/Chairo/chaHero.jpg">
+                            </div>
+                        </a>
+    
+                        <a href="./projectPages/juno.html">
+                            <div class="galleryBoxR">
+                                <div class="galleryTextR">
+                                    <h2 class="galleryTitle">Juno</h2>
+                                    <h3 class="gallerySubtitle">Sustainable System Design (2020)</h3>
+                                </div>
+                                <img id="junoHero" class="galleryImgR" src="./content/juno/junoHero.jpg">
+                            </div>
+                        </a>
+    
+                    </div>
+                    <div class="galleryRow">
 
                 <div class="galleryRow">
                     <a href="./projectPages/art.html">
@@ -105,12 +140,27 @@
                         </div>
                     </a>
 
-                    <div class="galleryBoxR">
-                    </div>
+                    <a href="./projectPages/photography.html">
+                        <div class="galleryBoxR">
+                            <div class="galleryTextR">
+                                <h2 class="galleryTitle">London Streets</h2>
+                                <h3 class="gallerySubtitle">Photography (2018 - Present)</h3>
+                            </div>
+                                <img id="photoHero" class="galleryImgR" src="./content/photography/globePub.jpg">
+                        </div>
+                    </a>
                 </div>
             </div>
             
         </main>
+        <script>
+            function wshover() {
+                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot2.jpg";
+            }
+            function wsoff() {
+                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot.jpg";
+            }
+        </script>
 
         <footer>
                 <div>

@@ -9,20 +9,20 @@
     --footerHeight: 50px;
 }
 
+#nRevImg {
+    height: calc(90vh - var(--headerHeight));
+}
 
 #landscapeImg {
-    height: min(80vh, 900px);
-    margin-left: max(calc(50vw - 60vh), calc(50vw - 600px));
-    margin-top: 20px;
+    height: calc(80vh - var(--headerHeight));
+    margin-top: 3vh;
 }
 #portraitImg {
-    height: min(80vh, 900px);
-    margin-left: max(calc(50vw - 30vh), calc(50vw - 300px));
-    margin-top: 20px;
+    height: calc(80vh - var(--headerHeight));
 }
 
 .carousel-item {
-    height: calc(100vh);
+    height: calc(100vh - var(--headerHeight));
 }
 
 .carousel-control-prev-icon {
@@ -42,7 +42,6 @@
 .carousel-indicators li {
    width: 15px;
    height: 15px;
-   margin-right: 5px;
    border-radius: 100%;
    opacity: 40%;
    background-color: var(--lGrey);
@@ -75,6 +74,15 @@
 
 .carousel-caption {
     color: var(--dGrey);
-    bottom:25px;
+    bottom:5vh;
 }
 
+h5 {
+    font-size: calc(8px + 1vh);
+}
+
+@media only screen and (max-height: 550px) {
+    h5 {
+        font-size: 0;
+    }
+}

@@ -28,9 +28,67 @@ header
     width: 100%;
     top: 0;
     box-shadow: 2px 2px 5px  rgba(25,25,25,0.1);
+    position: sticky;
+    background-color: white;
+    z-index: 10;
+}
+
+#whiteHeader
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    z-index: 100;
+    overflow: visible;
 }
 
 
+#Wname
+{
+    position: absolute;
+    top: 20px;
+    left: 5vw;
+    font-size: 18pt;
+    z-index: inherit;
+    opacity: 90%;
+}
+
+#WsmallNav
+{
+    position: absolute;
+    top: 22px;
+    right: 5vw;
+    z-index: inherit;
+}
+
+.WsmallNavLink {
+    opacity: 40%;
+}
+
+.WsmallNavLink,
+.WsmallNavLinkSelect
+{
+    margin-left: 20px;
+    z-index: inherit;
+}
+
+.WsmallNavLink:hover,
+.WsmallNavLinkSelect
+{
+    opacity: 90%;
+    z-index: inherit;
+}
+
+.WnavIcon {
+    opacity: 40%;
+    width: 20px;
+    margin-left: 15px;
+    margin-bottom: -2.5px;
+}
+
+.WnavIcon:hover {
+    opacity: 90%;
+}
 
 p
 {
@@ -105,12 +163,14 @@ a
 
 #vidStrip
 {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: calc(100vh - var(--headerHeight));
+    top: 0;
+    height: calc(100vh);
     align-items: centre;
     overflow: hidden;
     background-color: var(--dGrey);
+    z-index: 20;
     
 }
 
@@ -124,19 +184,11 @@ a
     opacity: 25%;
 }
 
-#gallerybar
-{
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14pt;
-    text-align: center;
-    height: 100px;
-}
 #intro
 {
     position: absolute;
     color: white;
-    margin-top: 30vh;
+    top: 35vh;
     margin-left: calc((100vw - 700px) /2);
     z-index: 100;
     text-align: center;
@@ -155,14 +207,14 @@ h1
 {
     position: absolute;
     z-index: 100;
-    margin-top: calc(100vh - 4vw - var(--headerHeight));
+    top: calc(100vh - 4vw);
     margin-left: 48.5vw;
 }
 
 #dArrow
 {
     width: 3vw;
-    opacity: 30%;
+    opacity: 40%;
 }
 
 #aboutMe
@@ -246,12 +298,13 @@ button:hover
 
 #gallery
 {
-   margin-top: 100px;
+   margin-top: calc(100vh);
+   padding-top: 100px;
    margin-left: 2vw;
    margin-right: 2vw;
    display: flex;
    flex-direction: column;
-   min-height: 100vh;   
+   min-height: 100vh; 
 }
 
 .galleryBoxL, .galleryBoxR
@@ -262,6 +315,7 @@ button:hover
     background-color: var(--dGrey);
     overflow: hidden;
     text-align: center;
+    transition: 0.2s opacity;
 }
 .galleryBoxL
 {
@@ -351,7 +405,7 @@ h3
 
 #websiteHero
 {
-    margin-left: -3%;
+    margin-left: 0%;
     height: 100%;
 }
 
@@ -366,6 +420,15 @@ h3
     margin-top: -3%;
 }
 
+#photoHero {
+    width: 100%;
+    margin-top: -5%;
+}
+
+#ninRevHero, #junoHero {
+    width: 100%;
+}
+
 footer {
     height: var(--footerHeight);
     margin: 0;
@@ -377,7 +440,7 @@ footer {
 #copyright {
     margin-left: 17vw;
     color: var(--lGrey);
-    font-size: 12px;
+    font-size: calc(6px+0.4vw);
 }
 
 
@@ -403,7 +466,7 @@ footer {
 }
 
 .space {
-    width: 100vw;
+    width: 90vw;
     height: 10vh;
 }
 
