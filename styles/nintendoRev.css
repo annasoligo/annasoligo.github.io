@@ -26,7 +26,7 @@
 #nRevHeadText {
     position: absolute;
     margin-left: 12vw;
-    margin-top: 27vw;
+    margin-top: calc(27vw + 30px);
 }
 
 
