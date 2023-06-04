@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="../styles/default.css" rel="stylesheet">
+        <link href="../styles/busQuad.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+        <title>Anna Soligo</title>
+        <link rel="icon" type="image/png" href="../content/symbols/favicon.png"/>
+        <script>
+            function playVideo(videoUrl, poster) {
+              var videoElement = document.getElementById('selected-video');
+              videoElement.src = videoUrl;
+              
+              videoElement.play();
+            }
+        </script>
+    <body id="body">
+    <!--
+        <header id="header">
+            <div id="navBar">
+                <div id="name">
+                    <a href="../index.html">Anna Soligo</a>
+                </div>
+                <div id="smallNav">
+                    <a class="smallNavLink" href="../index.html">Projects</a>
+                    <a class="smallNavLink" href="../aboutMe.html">About Me</a>
+                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="navIcon" id="inNav" src="../content/symbols/linkedin.png"></a>
+                    <a href="mailto: ajs1618@ic.ac.uk"><img class="navIcon" id="emNav" src="../content/symbols/email.png"></a>
+                </div>
+            </div>
+        </header>
+    -->
+
+        <main id= "bQmain">
+            <div id= "bQDiv">
+                <div id="bQHeadText">
+                    <h2 id="bQTitle">  Enabling Ultra-High Efficiency UAV Delivery <br> 
+                        through Integration with Public Transport: <br>
+                        A System Analysis and Aircraft Design</h2>
+                    <p id="bQName"> Anna Soligo, Dyson School of Design Engineering</p>
+                </div>
+                
+                <img id="bQheadImg" src="../content/busQuad/system.jpg" alt="A system diagram of a delivery drone riding on a London bus">
+                <div id="dArrowDiv">
+                    <a href="#bQContent">
+                        <img src="../content/busQuad/blackArrow.jpg" alt="Down Arrow" id="bdArrow">
+                    </a>
+                </div>
+            </div>
+    
+            <div id="bQContent">
+                <div id="break"></div>
+                <p >
+                    This project explored the concept of delivery drones hitch-hiking on public transport to minimise their energy consumption.
+                    A wirelessly-rechargeable, payload delivery quadcopter was designed and built as a hardware proof of concept and is 
+                    demonstrated in the following videos:
+                </p>    
+                <div class="container">
+                <div class="video-row">
+                    <div class="video-thumbnail">
+                      <img id="vidthumb" src="../content/busQuad/PLvidpost.jpg" alt="Payload delivery demo" onclick="playVideo('../content/busQuad/PL.mp4','../content/busQuad/PLvidpost.jpg')">
+                    </div>
+                    <div class="video-thumbnail">
+                      <img id="vidthumb" src="../content/busQuad/WPTvidpost.jpg" alt="Wireless power transfer demo" onclick="playVideo('../content/busQuad/WPT.mp4','../content/busQuad/WPTvidpost.jpg')">
+                    </div>
+                    <div class="video-thumbnail">
+                      <img id="vidthumb" src="../content/busQuad/tunevidpost.jpg" alt="Tuning process" onclick="playVideo('../content/busQuad/tuning_s.mp4','../content/busQuad/tunevidpost.jpg')">
+                    </div>
+                  </div>
+                  <div class="video-player">
+                    <video id="selected-video" src="../content/busQuad/PL.mp4" controls></video>
+                  </div>
+                </div>
+                <div id="break"></div>
+                <p >
+                    Documentation of the flight-controller and Raspberry Pi set-up, along with the UAV server codey, can be found in this public <a class="embLink" href="https://github.com/annasoligo/quadRPiServer">Github repo</a>.<br><br>
+                    This design was additionally used as a basis for a system analysis regarding the energy-efficiency of this concept, which is documented in the accompanying master's thesis and the analysis <a class="embLink" href="https://github.com/annasoligo/quadBusModel">Github repo</a>.<br><br>
+                    In the early project stages, a value sensitive design study was conducted to examine the ethical implications of urban delivery UAVs, and the resulting report can be downloaded <a class="embLink" href="../content/busQuad/urbanUAVethics.pdf" target="_blank">here</a>.
+        </div>
+        </main>
+        <div id="break"></div>
+
+
+        <footer>
+            <div>
+                <div>
+                    <p id="copyrightb">Coded from scratch, hosted on Github. 
+                    <br> © 2023 Anna Soligo<br><br></p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

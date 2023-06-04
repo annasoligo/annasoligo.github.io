@@ -1,0 +1,139 @@
+
+p {
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: 350;
+    max-width: 60vw;
+    font-size: max(16px, 0.75vw);
+    padding-left: 7vw;
+}
+#bQheadImg {
+    width:80%;
+    padding-bottom: 10vh;
+    bottom: 0;
+    margin-left: 15%;
+    position: absolute;
+    z-index: -2;
+}
+
+#bQDiv {
+    height: 100vh;
+    width: 95vw;
+    position: relative;
+}
+
+#bQmain {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+#drawEHeader {
+    overflow: hidden;
+    z-index: -100;
+}
+#bQSubHead, #bQName {
+    font-weight: 600;
+    font-size: max(16px, 0.75vw);
+    margin-top: 1vw;
+}
+
+#bQName {
+    padding-left: 0vw;
+}
+
+#bQHeadText {
+    position: absolute;
+    margin-left: 12vw;
+    margin-top: 15vh;
+}
+
+#bQContent1, #bQContent {
+    margin-left: 12vw;
+    overflow: hidden;
+}
+
+#bQVid {
+    width: 65vw;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+
+#graph {
+    width: 45vw;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#break {
+    height: min(2vh,30px);
+}
+
+#joystickCtrl {
+    width: min(95vw, 1000px);
+    height: 490px;
+    zoom: min(100, 10vw);
+    margin-left: max( 2vw, calc(50vw - 500px));
+    border: 0vh;
+    overflow: hidden;
+    margin-top: 8vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    #joystickCtrl {
+      width: 0;
+      height: 0;
+    }
+  }
+
+#bQTitle{
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: max(28px,1.5vw);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 60vw;
+    margin-left: 7.5vw;
+  }
+  
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+.video-thumbnail {
+    cursor: pointer;
+    width: 15vw;
+  }
+  
+.video-player {
+    width: 60vw;
+  }
+
+#vidthumb {
+    width: 12vw;
+}
+
+#selected-video {
+    width: 60vw;
+    margin-left: 0vw;
+    margin-top: 2vh;
+}
+
+#bdArrow
+{
+    width: 2vw;
+}
+
+#copyrightb {
+    margin-left: 12vw;
+    color: var(--lGrey);
+    font-size: calc(6px+0.4vw);
+    margin-top: 20px;
+}
