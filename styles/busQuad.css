@@ -5,7 +5,7 @@ p {
     width: 100%;
     font-weight: 350;
     max-width: 60vw;
-    font-size: max(16px, 0.75vw);
+    font-size: max(14px, 0.65vw);
     padding-left: 7vw;
 }
 #bQheadImg {
@@ -96,7 +96,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 60vw;
     margin-left: 7.5vw;
   }
