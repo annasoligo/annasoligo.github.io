@@ -126,11 +126,11 @@ p {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     #bQTitle{
         font-family: 'Arial', sans-serif;
         font-weight: 600;
-        font-size: max(25px,1.5vw);
+        font-size: max(25px,2vh);
     }
     #bQheadImg {
         width:120%;
