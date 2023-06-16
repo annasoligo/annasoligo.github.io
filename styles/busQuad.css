@@ -130,7 +130,7 @@ p {
     #bQTitle{
         font-family: 'Arial', sans-serif;
         font-weight: 600;
-        font-size: max(25px,5vh);
+        font-size: max(25px,3.5vh);
     }
     #bQheadImg {
         width:120%;
