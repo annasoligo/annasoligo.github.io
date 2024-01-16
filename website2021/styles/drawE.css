@@ -1,0 +1,43 @@
+#drawEHeadImg {
+    width:100%;
+    margin-top: -10vw;
+
+}
+
+#drawEHeader {
+    overflow: hidden;
+    z-index: -100;
+}
+
+#drawEHeadText {
+    position: absolute;
+    margin-left: 12vw;
+    margin-top: 15vw;
+}
+
+#deContent {
+    width: 100%;
+    overflow: hidden;
+}
+
+#drawEVid, #drawEDev {
+    width: 79vw;
+    margin: 1vw 10vw;
+}
+
+#joystickCtrl {
+    width: min(95vw, 1000px);
+    height: 490px;
+    zoom: min(100, 10vw);
+    margin-left: max( 2vw, calc(50vw - 500px));
+    border: 0vh;
+    overflow: hidden;
+    margin-top: 8vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    #joystickCtrl {
+      width: 0;
+      height: 0;
+    }
+  }

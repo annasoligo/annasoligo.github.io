@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="../styles/default.css" rel="stylesheet">
+        <link href="../styles/website.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+        <title>Anna Soligo</title>
+        <link rel="icon" type="image/png" href="../content/symbols/favicon.png"/>
+
+    </head>
+
+    <body id="body">
+        <header id="header">
+            <div id="navBar">
+                <div id="name">
+                    <a href="../index.html">Anna Soligo</a>
+                </div>
+                <div id="smallNav">
+                    <a class="smallNavLink" href="../index.html">Projects</a>
+                    <a class="smallNavLink" href="../aboutMe.html">About Me</a>
+                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="navIcon" id="inNav" src="../content/symbols/linkedin.png"></a>
+                    <a href="mailto: ajs1618@ic.ac.uk"><img class="navIcon" id="emNav" src="../content/symbols/email.png"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="siteStages">
+                <img class="siteimg" id="defaultimg" src="../content/website/site1.jpg" alt="Website process image">
+                <img class="siteimg" src="../content/website/site2.jpg" alt="Website process image">
+                <img class="siteimg" src="../content/website/site3.jpg" alt="Website process image">
+                <img class="siteimg" src="../content/website/site4.jpg" alt="Website process image">
+            </div>
+            <div id="websiteHeadText">
+                <h1 class="projTitle">Portfolio Website</h1>
+                <p class="projSubtitle" id="websiteDesc">
+                    This website was coded from scratch using HTML, CSS and Javascript. <br>
+                    It is hosted on Github - you can explore my code repository <a class="embLink" href="https://github.com/annasoligo/annasoligo.github.io">here</a>.
+                </p>
+            </div>
+
+            <script>
+                var siteStages = document.querySelectorAll("#siteStages img"), i = 1;
+
+                var currentImg = 0;
+                var previousImg = 3;
+
+                var fadeSeq = setInterval(fadeNext, 4000);
+
+                function fadeNext() {
+                    console.log("fading");
+                    siteStages[currentImg].style.opacity = "100%";
+                    siteStages[previousImg].style.opacity = "0%";
+                    currentImg++;
+                    previousImg++;
+                    if (currentImg == 4) {currentImg = 0};
+                    if (previousImg == 4) {previousImg = 0};
+                } 
+                
+            </script>
+
+                
+        </main>
+
+        <footer>
+            <div>
+                <div>
+                    <p id="copyright">Coded from scratch, hosted on Github. 
+                    <br> © 2021 Anna Soligo<br><br></p>
+                </div>
+            </div>
+            </footer>
+
+    </body>
+
+</html>

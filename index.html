@@ -1,174 +1,148 @@
 <!DOCTYPE html>
-<html lang="en" id="html">
-
-    <head>
-        <meta charset="utf-8">
-    <link href="styles/default.css" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/default.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
-    <script type="module" src="scripts/main.js"></script>
     <title>Anna Soligo</title>
-    <link rel="icon" type="image/png" href="./content/symbols/favicon.png"/>
-    <link rel="preload" as="image" href="./content/website/websiteScreenshot2.jpg">
+    <link rel="icon" type="image/png" href="../content/favicon.png"/>
+</head>
+<body>
+  <section id="top"> </section>
+  <header >
+    <div class="logo">
+        <a href="index.html">Anna Soligo </a><a style="color: #FFFFFF;"> </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="active" href="#top" class="landing">Home</a></li>
+            <li><a href="#projects" class="projects">Projects</a></li>
+            <li><a href="#about" class="about">About</a></li>
+        </ul>
+    </nav>
+</header>
+  <div class="landing">
+    <section class="main-section" id="landing">
+        <div class="center-text">
+            <h1>Hey, I'm Anna</h1>
+            <p class="tagline">I'm a researcher and climate tech entrepreneur. Currently building robust AI for the real world 
+              at Imperial College London and <a class="txtLink" href="https://www.clipenergy.co.uk/">CLIP Energy</a>.</p>
+        </div>
 
-    </head>
+        <a href="#projects" class="arrow" id ="arrow-link">
+          <img src="content/arrow.svg" alt="Arrow">
+        </a>
+    </section>
+  </div>
 
-    <body id="body">
-        <header>
-            <div id="navBar">
-                <div id="name">
-                    <a href="./index.html">Anna Soligo</a>
-                </div>
-                <div id="smallNav">
-                    <a class="smallNavLinkSelect" href="./index.html">Projects</a>
-                    <a class="smallNavLink" href="./aboutMe.html">About Me</a>
-                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="navIcon" id="inNav" src="./content/symbols/linkedin.png"></a>
-                    <a href="mailto: ajs1618@ic.ac.uk"><img class="navIcon" id="emNav" src="./content/symbols/email.png"></a>
-                </div>
+    <section id="projects" class="main-section">
+        <div class="project-tile" id="clip-tile">
+          <a href="https://www.clipenergy.co.uk" class="project-link" target="_blank">
+            <img src="../content/CLIP_hero.png" id="clipHero" class="project-image">
+            <div class="overlay">
+              <h3 class="project-title">CLIP Energy</h3>
+              <p class="project-description">CTO and cofounder - developing deep-learning powered sensing to empower consumers and unlock demand-side flexibility.</p>
             </div>
-        </header>
-
-        <main>
-            <div id="whiteHeader">
-                <div id="Wname">
-                    <a href="./index.html">Anna Soligo</a>
-                </div>
-                <div id="WsmallNav">
-                    <a class="WsmallNavLinkSelect" href="./index.html">Projects</a>
-                    <a class="WsmallNavLink" href="./aboutMe.html">About Me</a>
-                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="WnavIcon" id="inNav" src="./content/symbols/Wlinkedin.png"></a>
-                    <a href="mailto: ajs1618@ic.ac.uk"><img class="WnavIcon" id="emNav" src="./content/symbols/Wemail.png"></a>
-                </div>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="busQuad.html" class="project-link">
+            <img src="../content/masters_hero1.jpg" id="m1_hero" class="project-image">
+            <div class="overlay" id="dark-text">
+              <h3 class="project-title">Hitch-hiking UAVs</h3>
+              <p class="project-description">What if we integrated delivery drones with public transport? A feasibility and efficiency analysis.</p>
             </div>
-            <div id="intro">
-               <h1 id="introText"> 
-                   Hi, my name is Anna. I'm a design engineer <br>
-                   with a passion for sustainable innovation.
-               </h1> 
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="deliveryQuad.html" class="project-link">
+            <img src="..\content\UAV_hero.png" id="UAV_hero" class="project-image">
+            <div class="overlay">
+              <h3 class="project-title">An Autonomous Delivery Agent</h3>
+              <p class="project-description">Design and build of a UAV, integrating wireless charging with autonomous package deposition and collection.</p>
             </div>
-            <div id="dArrowDiv">
-                <a href="#gallery">
-                    <img src="./content/symbols/downArrow.png" alt="Down Arrow" id="dArrow">
-                </a>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="drawE.html" class="project-link">
+            <img src="..\content\drawE_hero.jpg" id="drawE_hero" class="project-image">
+            <div class="overlay" id="dark-text">
+              <h3 class="project-title">Draw-E</h3>
+              <p class="project-description">A COVID-baby. Building an interactive drawing-bot from cardboard and low-cost electronics.</p>
             </div>
-            <div id="vidStrip">
-                <video id="headerVid" autoplay muted loop>
-                    <source src="./content/headervid1.mp4"></source>
-                </video>
-            </div>
+          </a>
+        </div>
+      </section>
 
-            <div id="gallery">
-                <div class="galleryRow">
+      <section id="about" class="main-section">
+          <div class="bio-container">
+              <div class="slideshow-container">
+                <img src="../content/Anna_CLIP.jpg" class="slideshow-image">
+                <img src="../content/Anna_Cham.jpg" class="slideshow-image">
+                <img src="../content/Anna_ZM.png" class="slideshow-image">
+              </div>
+            <div class="bio">
+              <div class="bio-text">
+              <p>
+                Hey there, I'm Anna. I'm currently pursuing a PhD at Imperial, exploring world-models and hierarchical RL at the intersection of AI and robotics.
+                I'm also a cofounder and CTO at <a class="bio-links" href="https://www.clipenergy.com" target="_blank">CLIP Energy</a> where I'm leading the development of our
+                energy disagreggation algorithms to bring better energy insights to consumers.
+                When I'm not at my desk or in the lab, you'll probably find me somewhere <a class="bio-links" href="https://www.instagram.com/annasoligo/" target="_blank">up a mountain!</a>
+              </p>
+              <p>  
+                If you want to talk AI, mountains or anything else, I'd love to hear from you over 
+                <a class="bio-links" href="https://www.linkedin.com/in/annasoligo/" target="_blank">LinkedIn</a>
+                or by <a href="mailto:anna@clipenergy.co.uk">email</a>.
+              </p>
+              </div>
+              <div class="bio-button">
+                <a class="cv-button" href="content\AnnaSoligo_CV.pdf" target="_blank">CV<span class="CV-arrow">&#8594;</span></a>
+              </div>
+              </div>
+            </div>            
+          </div>
+      </section>
+      
+<div id="drone" class="drone">
+    <img class="droneBod" src="../content/UAV.svg" alt="SVG Image">
+    <img class="propeller" id="p1" src="../content/prop.svg" x="45" y="0"  />
+    <img class="propeller" id="p2" src="../content/prop.svg" x="0" y="45" />
+    <img class="propeller" id="p3" src="../content/prop.svg" x="45" y="120" />
+    <img class="propeller" id="p4" src="../content/prop.svg" x="120" y="45" />
+</div>
 
-                    <a href="./projectPages/website.html" onmouseover="wshover()" onmouseout="wsoff()">
-                        <div class="galleryBoxL">
-                            <div class="galleryTextL">
-                                <h2 class="galleryTitle">Portfolio Website</h2>
-                                <h3 class="gallerySubtitle">Coding - HTML, CSS and JS (2021)</h3>
-                            </div>
-                            <img id="websiteHero" class="galleryImgL" src="./content/website/websiteScreenshot.jpg">
-                        </div>
-                    </a>
+<script src="script.js"></script>
+<script>
+  const sections = document.querySelectorAll('section');
+  console.log(sections);
+  const navLi = document.querySelectorAll('nav li a');
+  window.onscroll = () => {
+    let current = "";
+    console.log("scrolled");
 
-                    <a href="./projectPages/drawE.html">
-                        <div class="galleryBoxR">
-                            <div class="galleryTextR">
-                                <h2 class="galleryTitle">Draw E</h2>
-                                <h3 class="gallerySubtitle">Physical Computing (2021)</h3>
-                            </div>
-                            <img id="drawEHero" class="galleryImgR" src="./content/drawE/deHero.jpg">
-                        </div>
-                    </a>
+    sections.forEach(section => {
+      console.log(section);
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
 
-                </div>
-                <div class="galleryRow">
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute('id');
+      }
+    });
 
-                    <a href="./projectPages/nintendoRev.html">
-                        <div class="galleryBoxL">
-                            <div class="galleryTextL">
-                                <h2 class="galleryTitle">Nintendo Rev</h2>
-                                <h3 class="gallerySubtitle">Industrial Design (2021)</h3>
-                            </div>
-                            <img id="ninRevHero" class="galleryImgL" src="./content/nintendoRev/tstHero.jpg">
-                        </div>
-                    </a>
-
-                    <a href="./projectPages/fea.html">
-                        <div class="galleryBoxR">
-                            <div class="galleryTextR">
-                                <h2 class="galleryTitle">Tandem Bicycle Design</h2>
-                                <h3 class="gallerySubtitle">Finite Element Analysis (2021)</h3>
-                            </div>
-                            <img id="feaHero" class="galleryImgR" src="./content/fea/bikeGrad.jpg">
-                        </div>
-                    </a>
-                
-                    <div class="galleryRow">
-
-                        <a href="./projectPages/chairo.html">
-                            <div class="galleryBoxL">
-                                <div class="galleryLink"></div>
-                                <div class="galleryTextL">
-                                    <h2 class="galleryTitle">Chairo</h2>
-                                    <h3 class="gallerySubtitle">Human Centred Design (2021)</h3>
-                                </div>
-                                <img id="chairoHero" class="galleryImgL" src="./content/Chairo/chaHero.jpg">
-                            </div>
-                        </a>
-    
-                        <a href="./projectPages/juno.html">
-                            <div class="galleryBoxR">
-                                <div class="galleryTextR">
-                                    <h2 class="galleryTitle">Juno</h2>
-                                    <h3 class="gallerySubtitle">Sustainable System Design (2020)</h3>
-                                </div>
-                                <img id="junoHero" class="galleryImgR" src="./content/juno/junoHero.jpg">
-                            </div>
-                        </a>
-    
-                    </div>
-                    <div class="galleryRow">
-
-                <div class="galleryRow">
-                    <a href="./projectPages/art.html">
-                        <div class="galleryBoxL">
-                            <div class="galleryTextL">
-                                <h2 class="galleryTitle">Selected Fine Art</h2>
-                                <h3 class="gallerySubtitle">Various Medias (2018 - Present)</h3>
-                            </div>
-                            <img id="artworkHero" class="galleryImgL" src="./content/artwork/streetPortrait.JPG">
-                        </div>
-                    </a>
-
-                    <a href="./projectPages/photography.html">
-                        <div class="galleryBoxR">
-                            <div class="galleryTextR">
-                                <h2 class="galleryTitle">London Streets</h2>
-                                <h3 class="gallerySubtitle">Photography (2018 - Present)</h3>
-                            </div>
-                                <img id="photoHero" class="galleryImgR" src="./content/photography/globePub.jpg">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-        </main>
-        <script>
-            function wshover() {
-                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot2.jpg";
-            }
-            function wsoff() {
-                document.getElementById("websiteHero").src = "./content/website/websiteScreenshot.jpg";
-            }
-        </script>
-
-        <footer>
-                <div>
-                    <p id="copyright">Coded from scratch, hosted on Github. 
-                    <br> © 2021 Anna Soligo<br><br></p>
-                </div>
-        </footer>
-
-    </body>
-
+    navLi.forEach(a => {
+      a.classList.remove('active');
+      if (a.classList.contains(current)) {
+        a.classList.add('active');
+      }
+    });
+  };
+</script>
+</body>
+<footer>
+    Coded from scratch, hosted on <a class="pLink" href="https://github.com/annasoligo" target="_blank">GitHub</a>.<br>
+    &copy; 2024 Anna Soligo
+  </footer>
 </html>

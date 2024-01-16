@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="../styles/default.css" rel="stylesheet">
+        <link href="../styles/drawE.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+        <title>Anna Soligo</title>
+        <link rel="icon" type="image/png" href="../content/symbols/favicon.png"/>
+
+    <body id="body">
+        <header id="header">
+            <div id="navBar">
+                <div id="name">
+                    <a href="../index.html">Anna Soligo</a>
+                </div>
+                <div id="smallNav">
+                    <a class="smallNavLink" href="../index.html">Projects</a>
+                    <a class="smallNavLink" href="../aboutMe.html">About Me</a>
+                    <a href="https://www.linkedin.com/in/anna-soligo-a8305b19b/"><img class="navIcon" id="inNav" src="../content/symbols/linkedin.png"></a>
+                    <a href="mailto: ajs1618@ic.ac.uk"><img class="navIcon" id="emNav" src="../content/symbols/email.png"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id= "drawEHeader">
+                <div id="drawEHeadText">
+                    <h1 class="projTitle"> Draw E</h1>
+                    <p class="projSubtitle">
+                        A drawing and painting cardboard robot, controlled <br>
+                        remotely over a server using a custom-coded web-app.
+                    </p>
+                </div>
+                
+                <img id="drawEHeadImg" src="../content/drawE/deHero.jpg" alt="Draw-E painting">
+            </div>
+            <div id="deContent">
+                <video id="drawEVid" poster="../content/drawE/deCover.jpg" controls>
+                    <source src="../content/drawE/deVideo.mp4"></source>
+                </video>
+
+                <iframe id="joystickCtrl" src="./joystick.html" title="Draw-E Joystick Control" scrolling="no">
+                </iframe>
+
+                <p>
+                    <br><br>
+                    Draw-E's hands can be adjusted to hold a variety of different art tools. He can then be made to draw, write or paint by 'driving' him using a web-app. 
+                    When Draw-E feels too hot, fans on the body turn on to cool him down. When you 
+                    get too close to his pen, he'll flash his red lights. <br><br>
+                    The web-app is hosted on a server run on an ESP32 inside Draw-E. 
+                    Buttons move the arm up and down, and a joystick coded in javascript controls 
+                    the speed and direction by mapping the coordinates of the finger or mouse position 
+                    to left and right wheel speeds. A thermistor detects the temperature and an ultrasonic 
+                    sensor detects the proximity of obstacles. <br><br>
+                    Aside from the electronics, Draw-E was built using paper, cardboard, a clothes hangar and glue.
+                </p>
+            
+                <img id="drawEDev" src="../content/drawE/deDevelopment.jpg" alt="Development drawings">
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <div>
+                    <p id="copyright">Coded from scratch, hosted on Github. 
+                    <br> © 2021 Anna Soligo<br><br></p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
