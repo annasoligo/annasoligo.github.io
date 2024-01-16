@@ -120,15 +120,16 @@
   const navLi = document.querySelectorAll('nav li a');
   window.onscroll = () => {
     let current = "";
-    console.log("scrolled");
 
     sections.forEach(section => {
-      console.log(section);
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
 
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
         current = section.getAttribute('id');
+      }
+      if (current == 'top') {
+        current = 'landing';
       }
     });
 
