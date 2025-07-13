@@ -1,0 +1,550 @@
+:root {
+  --black: #131C25;
+  --white: #FFFFFF;
+  --highlight1: #66D9ED;
+  --highlight2: #9B39FD;
+  --highlight3: #FF9F6E;
+  --highlight4: #FFD48C;
+  --header-height: 60px;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+
+}
+
+body {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: var(--black);
+  z-index: 1; /* Ensure the header stays on top of other elements */
+  position: fixed;
+  width: 100vw;
+  margin: 0;
+  height: var(--header-height);
+  top: 0;
+}
+
+.main-section {
+  position: relative;
+  min-height: 80vh;
+  padding: 40px 50px 50px; /* Adjusted padding to account for the fixed header */
+}
+
+
+.txtLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.txtLink:hover {
+  color: var(--highlight3);
+}
+
+.logo {
+  width: 30vw;
+  padding: 15px 2vw;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--highlight1);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo a:hover {
+  color: #FFFFFF;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: max(30vw, 35ch);
+  align-items: right;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Cascadia Code', monospace;
+  font-size: 16px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+nav a:hover {
+  color: var(--highlight3);
+  font-weight: bold;
+}
+
+nav a.active {
+  color: var(--highlight1);
+}
+
+
+.center-text {
+    text-align: left;
+    max-width: 450px;
+    margin: 0 auto 0 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    padding-top: 30vh;
+  }
+  
+  .tagline {
+    font-size: 1em;
+    padding-bottom: 10vh;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .drone {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    transform-origin: center;
+    rotate: 90deg;;
+    transition: transform 0.1s;
+    pointer-events: none;
+    z-index: 2000;
+    display: block;
+  }
+  
+  .droneBod {
+    opacity: 0.8;
+  }
+  
+  @keyframes rotatePropeller {
+    to {
+      transform: rotate(1600deg);
+    }
+  }
+  
+  .propeller {
+    position: absolute;
+    transform-origin: center;
+    animation: rotatePropeller 1s infinite linear;
+    width: 60%;
+    height: auto;
+    filter: blur(2px);
+  }
+  
+  #p1 {
+    top: -24%;
+    left: -24%;
+  }
+  
+  #p2 {
+    top: 75%;
+    left: 60%;
+  }
+  
+  #p3 {
+    top: 75%;
+    left: -24%;
+  }
+  
+  #p4 {
+    top: -24%;
+    left: 60%;
+  }
+  
+
+  .arrow {
+    display: flex;
+    position: relative;
+    bottom: -10vh;
+    margin-left: 50%;
+    width: 40px; /* Adjust the width */
+    height: 40px; /* Adjust the height */
+  }
+
+  .arrow img {
+    opacity: 0.5; /* Initial opacity */
+    transition: opacity 0.5s; /* Add transition for smooth opacity changes */
+    animation: pulse 4s infinite; /* Pulse animation */
+    width: 30px;
+    height: 30px;
+  }
+  
+  .arrow:hover img {
+    opacity: 1; /* Brighter opacity on hover */
+    animation: none; /* Remove animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+
+  footer {
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    font-family: 'Cascadia Code', monospace;
+  }
+
+  .pLink {
+    text-decoration: none;
+    color: var(--highlight2); /* Use the purple highlight color */
+    opacity: 0.7; /* Initial opacity */
+    transition: opacity 0.3s, color 0.3s; /* Add transitions for smooth changes */
+  }
+  
+  .pLink:hover {
+    opacity: 1; /* Full opacity on hover */
+    color:var(--highlight2); /* Brighter purple color on hover (fallback for browsers that don't support custom properties) */
+  }
+
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  
+  .project-tile {
+    position: relative;
+    min-width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .project-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .project-image {
+    filter: brightness(30%); /* Initial faded appearance */
+    transition: filter 0.3s; /* Add transition for smooth changes */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .project-link:hover .project-image {
+    filter: brightness(100%); /* Brighter appearance on hover */
+  }
+
+  #clipHero {
+    height: 100%; /* Ensure the image takes the full width of the container */
+    width: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Scale the image while maintaining its aspect ratio */
+    object-position: right;
+    margin-left: auto; /* Push the image to the right */
+    margin-right: 0;
+}
+
+#clip-tile {
+  background-color: rgba(102, 217, 237, 0.1);
+  transition: background-color 0.3s;
+}
+
+#m1_hero {
+  height: 120%; /* Ensure the image takes the full width of the container */
+  width: auto; /* Maintain the image's aspect ratio */
+  object-fit: fill; /* Scale the image while maintaining its aspect ratio */
+  object-position: center;
+  margin-left: 0; /* Push the image to the right */
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+#UAV_hero {
+  
+  object-fit: cover; /* Scale the image while maintaining its aspect ratio */
+  object-position: centre;
+  margin-left: 0; /* Push the image to the right */
+  margin-right: auto;
+  opacity: 0.8;
+}
+
+#drawE_hero {
+  object-fit: cover; /* Scale the image while maintaining its aspect ratio */
+  object-position: centre;
+  margin-left: auto; /* Push the image to the right */
+  margin-right: 0;
+  opacity: 0.8;
+}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 5%;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    transition: opacity 0.3s; /* Add transition for smooth changes */
+    
+  }
+
+  #dark-text {
+    color: var(--black);
+  }
+  
+  .project-link:hover .overlay {
+    opacity: 1; /* Full opacity on hover */
+  }
+
+  #clip-tile:hover {
+    background-color: rgba(102, 217, 237, 0.3);
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+  
+  .project-description {
+    font-size: 16px;
+    font-family: 'Cascadia Code', monospace;
+    margin-top: 0;
+    width: max(40%, min(450px, 60%));
+  }
+
+  #dark-text p {
+    font-weight: bold;
+  }
+
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bio-container {
+    padding-top: var(--header-height);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: min(600px,40vw) min(600px,40vw);
+    gap: 50px; /* Adjust the gap between grid items */
+    height: min(400px, 30vw); 
+    width: auto;
+  }
+  
+  .bio {
+    font-size: 14px;
+    height: min(400px, 30vw);
+  }
+
+  .bio-text{
+    width:min(40vw, 400px);
+    max-width:  500px; /* Adjust as needed */
+  }
+  
+  .bio-text a {
+    text-decoration: none;
+    color: var(--highlight3);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+  
+  .bio-text a:hover {
+    color: var(--highlight2);
+  }
+
+  .bio-button {
+    margin-top: 30px;
+    padding: 0.5ch 1.2ch;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    width: 3.8ch;
+    height: 2ch;
+    font-size: 18px;
+  }
+
+  .cv-button {
+    transition: all 0.2s linear 0s;
+    position: relative;
+    font-family: 'Cascadia Code', monospace;
+    color: #000000;
+    text-decoration: none;
+    width: 3.8ch;
+    font-weight: bold;
+    padding-left: 1ch;
+  
+    .CV-arrow {
+      padding-left: -1ch;
+      color: #FFFFFF;
+      transition: color 0.2s linear;
+    }
+  
+    &:hover {
+      padding-left: 0.5ch;
+      .CV-arrow {
+        color: var(--black); /* Change to your desired blue color */
+      }
+    }
+  }
+  
+.slideshow-image {
+  overflow: hidden;
+  width: auto;
+  max-width: min(600px,40vw);
+  height: min(400px, 30vw);
+  object-fit: cover;
+  position: absolute;
+  border-radius: 1vw;
+  transition: opacity 2s ease-in-out; /* Add fade transition */
+}
+
+.slideshow-container {
+  overflow: hidden;
+  height: min(400px, 30vw);
+}
+
+.slideshow-image:not(:first-child) {
+    opacity: 0; /* Hide all images except the first one initially */
+  }
+
+@media only screen and (max-width: 1300px) {
+    .overlay {
+      opacity: 1;
+    }
+    #clip-tile {
+      background-color: rgba(102, 217, 237, 0.4);
+    }
+
+    .drone {
+      display: none;
+    }
+
+    .arrow {
+      display: none;
+    }
+
+    .project-image {
+      filter: brightness(100%);
+    }
+
+    .landing {
+      height: max(30vh, 80vw);
+    }
+  }
+
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+
+    .project-tile {
+      height: max(40vh, 60vw);
+    }
+    
+    #about {
+      height: min(500px, 50vw);
+      min-height: min(500px, 50vw);
+    }
+
+    h1 {
+      padding-top: 20vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .logo a {
+    font-size: 18px;
+  }
+
+  h1 {
+    padding-top: 100px;
+    font-size: 2em;
+  }
+
+  .main-section {
+    padding: 0;
+    min-height: 80vh;
+  }
+
+  .project-tile {
+    height: min(40vh, 60vw);
+  }
+
+  .bio-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100vh;
+  }
+
+  .slideshow-image {
+    left: 22vw;
+    height: 40vw;
+    max-width: min(600px,80vw);
+  }
+  .slideshow-container {
+    align-content: center;
+  }
+
+  .bio-text {
+    width: 60vw;
+  }
+
+  .bio {
+    height: auto;
+  }
+
+  header {
+    padding: 20px 20px;
+  }
+
+  .tagline, .project-description, .bio-text {
+    font-size: 12px;
+  }
+
+  .tagline, .project-title {
+    max-width: 70vw;
+  }
+  
+}
+
+
+

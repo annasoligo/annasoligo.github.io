@@ -1,149 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/default.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
     <title>Anna Soligo</title>
-    <link rel="icon" type="image/png" href="../content/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="top"> </section>
-  <header >
-    <div class="logo">
-        <a href="index.html">Anna Soligo </a><a style="color: #FFFFFF;"> </a>
-    </div>
-    <nav>
-        <ul>
-            <li><a class="active" href="#top" class="landing">Home</a></li>
-            <li><a href="#projects" class="projects">Projects</a></li>
-            <li><a href="#about" class="about">About</a></li>
-        </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-name">Anna Soligo</div>
+            <ul class="nav-links">
+                <li><a href="mailto:annasoligo18@imperial.ac.uk">Email</a></li> <!-- Replace with actual email -->
+                <li><a href="https://github.com/annasoligo" target="_blank">GitHub</a></li> <!-- Replace with actual Twitter URL -->
+                <li><a href="https://x.com/anna_soligo" target="_blank">Twitter</a></li> <!-- Replace with actual Twitter URL -->
+                <li><a href="https://scholar.google.com/citations?user=jzz6F34AAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a></li> <!-- Replace with actual Google Scholar URL -->
+                <li><a href="mountains.html">🏔️</a></li>
+            </ul>
+        </div>
     </nav>
-</header>
-  <div class="landing">
-    <section class="main-section" id="landing">
-        <div class="center-text">
-            <h1>Hey, I'm Anna</h1>
-            <p class="tagline">I'm a researcher and climate tech entrepreneur. Currently building robust AI for the real world 
-              at Imperial College London and <a class="txtLink" href="https://www.clipenergy.co.uk/">CLIP Energy</a>.</p>
-        </div>
 
-        <a href="#projects" class="arrow" id ="arrow-link">
-          <img src="content/arrow.svg" alt="Arrow">
-        </a>
-    </section>
-  </div>
-
-    <section id="projects" class="main-section">
-        <div class="project-tile" id="clip-tile">
-          <a href="https://www.clipenergy.co.uk" class="project-link" target="_blank">
-            <img src="../content/CLIP_hero.png" id="clipHero" class="project-image">
-            <div class="overlay">
-              <h3 class="project-title">CLIP Energy</h3>
-              <p class="project-description">CTO and cofounder - developing deep-learning powered sensing to empower consumers and unlock demand-side flexibility.</p>
-            </div>
-          </a>
-        </div>
-        <div class="project-tile">
-          <a href="busQuad.html" class="project-link">
-            <img src="../content/masters_hero1.jpg" id="m1_hero" class="project-image">
-            <div class="overlay" id="dark-text">
-              <h3 class="project-title">Hitch-hiking UAVs</h3>
-              <p class="project-description">What if we integrated delivery drones with public transport? A feasibility and efficiency analysis.</p>
-            </div>
-          </a>
-        </div>
-        <div class="project-tile">
-          <a href="deliveryQuad.html" class="project-link">
-            <img src="..\content\UAV_hero.png" id="UAV_hero" class="project-image">
-            <div class="overlay">
-              <h3 class="project-title">An Autonomous Delivery Agent</h3>
-              <p class="project-description">Design and build of a UAV, integrating wireless charging with autonomous package deposition and collection.</p>
-            </div>
-          </a>
-        </div>
-        <div class="project-tile">
-          <a href="drawE.html" class="project-link">
-            <img src="..\content\drawE_hero.jpg" id="drawE_hero" class="project-image">
-            <div class="overlay" id="dark-text">
-              <h3 class="project-title">Draw-E</h3>
-              <p class="project-description">A COVID-baby. Building an interactive drawing-bot from cardboard and low-cost electronics.</p>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section id="about" class="main-section">
-          <div class="bio-container">
-              <div class="slideshow-container">
-                <img src="../content/Anna_CLIP.jpg" class="slideshow-image">
-                <img src="../content/Anna_Cham.jpg" class="slideshow-image">
-                <img src="../content/Anna_ZM.png" class="slideshow-image">
-              </div>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="./profile_pic.png" alt="Your Name" class="profile-photo">
             <div class="bio">
-              <div class="bio-text">
-              <p>
-                Hey there, I'm Anna. I'm currently pursuing a PhD at Imperial, exploring world-models and hierarchical RL at the intersection of AI and robotics.
-                I'm also a cofounder and CTO at <a class="bio-links" href="https://www.clipenergy.com" target="_blank">CLIP Energy</a> where I'm leading the development of our
-                energy disagreggation algorithms to bring better energy insights to consumers.
-                When I'm not at my desk or in the lab, you'll probably find me somewhere <a class="bio-links" href="https://www.instagram.com/annasoligo/" target="_blank">up a mountain!</a>
-              </p>
-              <p>  
-                If you want to talk AI, mountains or anything else, I'd love to hear from you over 
-                <a class="bio-links" href="https://www.linkedin.com/in/annasoligo/" target="_blank">LinkedIn</a>
-                or by <a href="mailto:anna@clipenergy.co.uk">email</a>.
-              </p>
-              </div>
-              <div class="bio-button">
-                <a class="cv-button" href="content\AnnaSoligo_CV.pdf" target="_blank">CV<span class="CV-arrow">&#8594;</span></a>
-              </div>
-              </div>
-            </div>            
-          </div>
-      </section>
-      
-<div id="drone" class="drone">
-    <img class="droneBod" src="../content/UAV.svg" alt="SVG Image">
-    <img class="propeller" id="p1" src="../content/prop.svg" x="45" y="0"  />
-    <img class="propeller" id="p2" src="../content/prop.svg" x="0" y="45" />
-    <img class="propeller" id="p3" src="../content/prop.svg" x="45" y="120" />
-    <img class="propeller" id="p4" src="../content/prop.svg" x="120" y="45" />
-</div>
+                <p>Hey, I'm Anna. I'm currently a MATS scholar with Neel Nanda, and also doing a PhD at Imperial College London, supervised by David Boyle. I'm interested in interpretability and what this can teach us about how language models work and how we can make them safer.</p>
+                <p>Before that, I studied Design Engineering, had a job designing and building experimental tilt-wing aircraft, and started a clean-tech company aimed at reducing household energy consumption. In my free time I climb and <a href="mountains.html">go up mountains.</a></p>
+            </div>
+        </section>
 
-<script src="script.js"></script>
-<script>
-  const sections = document.querySelectorAll('section');
-  console.log(sections);
-  const navLi = document.querySelectorAll('nav li a');
-  window.onscroll = () => {
-    let current = "";
+        <!-- News Section -->
+        <section class="news">
+            <h2>News</h2>
+            <ul class="news-list">
+                <li><span class="date">July 2025</span> - I'm helping to organise the NeurIPS 2025 <a href="https://mechinterpworkshop.com/" target="_blank">Workshop on Actionable Interpretability</a>. We're looking for reviewers: please volunteer <a href="https://docs.google.com/forms/d/e/1FAIpQLSdiw1SJllzoTz_nqzDTzTOGb9DV3W_truQyh-WvYj_QGIi7Mg/viewform" target="_blank">here</a>!</li>
+                <li><span class="date">June 2025</span> - Two papers accepted to ICML workshops. More info in the research section below!</li>
+                <li><span class="date">May 2025</span> - Our paper on "Inducing, Detecting and Characterising Neural Modules" was accepted to ICML.</li>
+            </ul>
+        </section>
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-
-      if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute('id');
-      }
-      if (current == 'top') {
-        current = 'landing';
-      }
-    });
-
-    navLi.forEach(a => {
-      a.classList.remove('active');
-      if (a.classList.contains(current)) {
-        a.classList.add('active');
-      }
-    });
-  };
-</script>
+        <!-- Research Section -->
+        <section id="research" class="research">
+            <h2>Research</h2>
+            <ul class="paper-list">
+                <li>
+                    <span class="paper-links">[<a href="https://arxiv.org/abs/2506.11618" target="_blank">arXiv</a>, <a href="https://www.lesswrong.com/posts/umYzsh7SGHHKsRCaA/convergent-linear-representations-of-emergent-misalignment">blog-post</a>]</span>
+                    <span class="paper-date">June 2025</span>
+                    <span class="paper-title">Convergent Linear Representations of Emergent Misalignment.</span>
+                    <span class="paper-authors">Anna Soligo*, Edward Turner*, Senthooran Rajamanoharan, Neel Nanda.</span>
+                    <span class="paper-venue">ICML 2025 Workshop on Actionable Interpretability</span>
+                </li>
+                <li>
+                    <span class="paper-links">[<a href="https://arxiv.org/abs/2506.11613" target="_blank">arXiv</a>, <a href="https://www.lesswrong.com/posts/yHmJrDSJpFaNTZ9Tr/model-organisms-for-emergent-misalignment">blog-post</a>]</span>
+                    <span class="paper-date">June 2025</span>
+                    <span class="paper-title">Model Organisms for Emergent Misalignment.</span>
+                    <span class="paper-authors">Edward Turner*, Anna Soligo*, Mia Taylor, Senthooran Rajamanoharan, Neel Nanda.</span>
+                    <span class="paper-venue">ICML 2025 Workshop on Reliable and Responsible Foundation Models</span>
+                </li>
+                <li>
+                    <span class="paper-links">[<a href="https://arxiv.org/abs/2501.17077" target="_blank">arXiv</a>]</span>
+                    <span class="paper-date">May 2025</span>
+                    <span class="paper-title">Inducing, Detecting and Characterising Neural Modules: A Pipeline for Functional Interpretability in Reinforcement Learning.</span>
+                    <span class="paper-authors">Anna Soligo, Pietro Ferraro, David Boyle.</span>
+                    <span class="paper-venue">Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)</span>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
-<footer>
-    Coded from scratch, hosted on <a class="pLink" href="https://github.com/annasoligo" target="_blank">GitHub</a>.<br>
-    &copy; 2024 Anna Soligo
-  </footer>
 </html>

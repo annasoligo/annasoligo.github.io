@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/default.css" rel="stylesheet">
+    <link href="../styles/project.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+    <title>DrawE</title>
+    <link rel="icon" type="image/png" href="../content/favicon.png"/>
+</head>
+<body class="light">
+    <header>
+        <div class="logo">
+            <a href="index.html">Anna Soligo</a><a style="color: #000000;">.</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id= "drawEHeader">
+            <div id="drawEHeadText">
+                <h1 class="projTitle"> Draw E</h1>
+                <p class="projSubtitle">
+                    A cardboard drawing and painting robot, controlled 
+                    remotely over a server using a custom-coded web-app.
+                </p>
+            </div>
+            
+            <img id="drawEHeadImg" src="../content/drawE/deHero.jpg" alt="Draw-E painting">
+        </div>
+        <div id="deContent">
+            <video id="drawEVid" poster="../content/drawE/deCover.jpg" controls>
+                <source src="../content/drawE/deVideo.mp4"></source>
+            </video>
+
+            <iframe id="joystickCtrl" src="./joystick.html" title="Draw-E Joystick Control" scrolling="no">
+            </iframe>
+        
+            <img id="drawEDev" src="../content/drawE/deDevelopment.jpg" alt="Development drawings">
+        </div>
+    </main>
+    <footer>
+        Coded from scratch, hosted on <a class="pLink" href="https://github.com/annasoligo" target="_blank">GitHub</a>.<br>
+        &copy;2024 Anna Soligo
+    </footer>
+</body>
+</html>
